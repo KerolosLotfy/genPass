@@ -11,8 +11,8 @@ getColorInlocalStorage(localStorage.getItem('color'))
 genBtn.addEventListener('click', (e) => {
     e.preventDefault();
     copyBtn.classList.remove('active');
+    e.target.parentElement[0].blur();
     let pass = e.target.parentElement[0].value.trim();
-
     // Generate New Pass 
     let newPass = generate(pass);
 
@@ -55,6 +55,7 @@ gearIcon.addEventListener('click', () => {
     colors.forEach((c) => {
         c.addEventListener('click', (e) => {
             document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
+            gearIcon.parentElement.classList.remove('active');
 
             // set Color in local Storage 
             setColorInlocalStorage(e.target.dataset.color);
