@@ -22,18 +22,10 @@ genBtn.addEventListener('click', (e) => {
 
 // Generate New Pass 
 function generate(pass) {
-    // let arr = {
-    //     nums: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-    //     capitalLetters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''),
-    //     smallLetters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.toLowerCase().split('')
-    // }
-
-    // let arr = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-    // console.log(arr.length);
 
     let newPass = '';
     for (let i = 0; i < pass.length; i++) {
-        newPass += `*${pass[i]}`;
+        newPass += `K#eljrqpe${pass[i]}@ljrqper${pass[0].toUpperCase()}oljrqpe`;
     }
 
     // add New Pass To Page
